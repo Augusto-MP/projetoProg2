@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ListarMotoristaController">
+   <children>
+      <MenuBar VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" onAction="#voltarAoMenu" text="Menu">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#voltarAoMenu" text="Voltar ao menu" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="123.0" layoutY="14.0" prefHeight="27.0" prefWidth="257.0" text="Lista de motoristas cadastrados" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="484.0" layoutY="410.0" mnemonicParsing="false" onAction="#voltarAoMenu" prefHeight="26.0" prefWidth="83.0" text="Voltar" />
+            <TableView fx:id="tabela" layoutX="14.0" layoutY="41.0" prefHeight="361.0" prefWidth="554.0">
+              <columns>
+                <TableColumn fx:id="colunaNome" prefWidth="142.0" text="Nome" />
+                  <TableColumn fx:id="colunaCnh" prefWidth="134.0" text="CNH" />
+                  <TableColumn fx:id="colunaCategoria" prefWidth="66.0" text="Categoria" />
+                  <TableColumn fx:id="colunaEndereco" prefWidth="166.0" text="Endereço" />
+                  <TableColumn fx:id="colunaSetor" prefWidth="45.0" text="Setor" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
